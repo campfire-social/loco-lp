@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Smash Burgers", 
+        "image": "/assets/img/smash-burgers.jpg",
+        "difficulty": "Easy",
+        "time": "10 min.",
+        "url": ""
+    },
+    {
+        "name": "Smash Burgers", 
+        "image": "/assets/img/smash-burgers.jpg",
+        "difficulty": "Easy",
+        "time": "10 min.",
+        "url": ""
+    },
+    {
+        "name": "Smash Burgers", 
+        "image": "/assets/img/smash-burgers.jpg",
+        "difficulty": "Easy",
+        "time": "10 min.",
+        "url": ""
+    }
+]

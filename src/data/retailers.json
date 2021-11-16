@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Home Depot",
+        "image": "/assets/img/the-home-depot-1.svg",
+        "url": "https://www.homedepot.com/"
+    },
+    {
+        "name": "Walmart",
+        "image": "/assets/img/walmart.svg",
+        "url": "https://www.walmart.com/"
+    },
+    {
+        "name": "Lowe's",
+        "image": "/assets/img/lowe-s-2.svg",
+        "url": "https://www.lowes.com/"
+    },
+    {
+        "name": "Ace Hardware",
+        "image": "/assets/img/ace-hardware.svg",
+        "url": "https://www.acehardware.com/"
+    }
+]

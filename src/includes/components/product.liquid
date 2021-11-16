@@ -1,0 +1,70 @@
+{% assign _content = content %}
+{% assign _i = even %}
+
+<article class="md:border-t-2 border-loco-tan">
+  <div class="lg:grid lg:grid-cols-5">
+    {% comment %} Product Image {% endcomment %}
+    <div class="md:py-6 lg:p-6 lg:col-span-2 {% if _i == true %}lg:order-2 lg:border-l-2 border-loco-tan{% endif %}">
+      <img src="{{_content.image}}" alt="photo of {{_content.name}}">
+    </div>
+    {% comment %} Product Text {% endcomment %}
+    <div class="md:grid md:grid-cols-2 md:border-t-2 lg:border-t-0   border-loco-tan lg:col-span-3 {% if _i == true %} lg:border-l-0 {% else %} lg:border-l-2 {% endif %}">
+      <div class="py-6 md:pr-6 lg:p-6">
+        <h3 class="text-white text-xl font-bold">{{{_content.name}}</h3>
+        <p class="mt-6 text-white">{{_content.description}}</p>
+        <ul class="mt-4 list-disc ml-6">
+          {% for _detail in _content.details %}
+          <li class="text-white">{{_detail}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% comment %} Product Icons {% endcomment %}
+      <div class="md:border-l-2 border-loco-tan">
+
+        <div class="border-t-2 lg:border-t-0 md:border-0 border-loco-tan xl:h-2/3">
+          <div class="flex md:h-full">
+            <div class="w-3/5 flex flex-col h-full items-stretch">
+              <div class="flex-1 p-4 flex items-center justify-items-stretch">
+                <span class="mr-6 lg:mr-4">
+                  {% include 'icons/clean' icon_class: 'mx-auto block' %}
+                </span>
+                <p class="flex-1 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan">Cleans
+                  <br class="lg:hidden"> up Fast</p>
+              </div>
+              <div class="flex-1 flex items-center border-t-2 border-loco-tan p-4">
+                <span class="ml-6 lg:ml-4 order-2">
+                  {% include 'icons/strong' icon_class: 'mx-auto block' %}
+                </span>
+                <p
+                  class="text-right flex-1 order-1 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan">
+                  Built <br class="lg:hidden"> to
+                  Last</p>
+              </div>
+            </div>
+            <div class="w-2/5 flex flex-col items-center justify-center border-l-2 border-loco-tan p-4">
+              <span>
+                {% include 'icons/thermometer' icon_class: 'mx-auto block' %}
+              </span>
+              <p class="mt-2 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan text-center">
+                Smart Temp Control</p>
+            </div>
+          </div>
+        </div>
+        {% comment %} Product Dropdown {% endcomment %}
+        <div class="py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3">
+          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent">
+            <option value="">Select a store to buy</option>
+            <option value="">Walmart</option>
+            <option value="">Home Depot</option>
+            <option value="">Lowe's</option>
+            <option value="">Ace Hardware</option>
+          </select>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</article>

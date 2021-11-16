@@ -1,0 +1,21 @@
+{% assign _nav_items = nav_items %}
+
+<header class="absolute top-0 left-0 z-10 w-full">
+  <div class="px-6 py-4 flex items-center">
+    <a href="/" class="block w-24">
+      <img src="/assets/img/loco-logo-white.png" alt="LoCo Cookers">
+      <span class="sr-only">LoCo Cookers</span>
+    </a>
+    {% if _nav_items.size > 0 %}
+    <nav class="hidden">
+      <ul>
+        {% for _item in _nav_items  %}
+        <li>
+          {% include 'components/nav-item', nav_link: _item.url, nav_text: _item.text %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</header>

@@ -1,0 +1,264 @@
+---
+layout: layouts/base.liquid
+---
+
+{% comment %} Hero Section {% endcomment %}
+<section class="relative bg-loco-orange overflow-hidden">
+  <div>
+    <div class="relative">
+      <div class="aspect-w-16 aspect-h-9">
+        <img class="w-full h-full object-center object-cover" src="/assets/img/lp-hero.jpg" alt=""
+          role="presentation" />
+      </div>
+      <div>
+        <div class="absolute left-0 right-0 translate-y-1/2" style="transform: rotate(12deg); bottom:6%;width: 110%;">
+          <img class="w-full opacity-60 filter saturate-150" src="/assets/img/loco-logo-orange.png" alt=""
+            role="presentation" />
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full text-loco-orange">
+        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.34 75.29">
+          <g>
+            <g id="Layer_1-2" data-name="Layer 1">
+              <polygon points="480.33 44.28 324.66 67.26 0 0 0 75.29 480.34 75.29 480.33 44.28" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="md:absolute md:top-0 md:left-0 md:z-10 md:w-full md:h-full md:flex md:items-center">
+      <div class="container mx-auto">
+        <div class="md:grid md:grid-cols-2">
+          <div class="relative -mt-14 sm:-mt-20 px-6 py-14 text-white md:col-span-1 md:col-start-2">
+            <span class="inline-block h-3 w-12 bg-black mb-6"></span>
+            <h1 class="sr-only">Loco Cookers</h1>
+            <p class="text-4xl lg:text-5xl text-upper font-bold uppercase">When everyone has a seat at the table you
+              need something big to cook
+              for them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} Product Section {% endcomment %}
+<section class="relative bg-loco-orange">
+  <div class="px-6 md:pt-8">
+    <div class="container mx-auto">
+      <h2
+        class="bg-black px-6 py-4 text-loco-tan text-xl md:text-2xl lg:text-3xl font-serif font-strong font-bold text-center max-w-xl lg:max-w-4xl  tracking-wide mx-auto">
+        Introducing Griddles from LoCo
+      </h2>
+    </div>
+  </div>
+  {% if griddles.size > 0 %}
+  <div class="px-2 md:px-6 mt-6 md:mt-10">
+    <div class="max-w-4xl lg:container mx-auto mb-12 lg:mb-16">
+      {% include 'components/headline', headline_text: 'The Griddles', headline_tag: 'h3' %}
+      <ul class="mt-6 space-y-8 lg:space-y-0">
+        {% for griddle in griddles %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% if thecycle == 'even' %}
+          {% assign _even = true %}
+        {% else %}
+          {% assign _even = false %}
+        {% endif %}
+        <li class="">
+        {% include 'components/product', content: griddle, even: _even  %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  <div class="mt-8 pb-12 lg:pb-16">
+    <h3 class="font-serif max-w-xs md:max-w-none mx-auto text-center text-loco-tan text-2xl lg:text-3xl font-bold">
+      Available at your favorite grilling
+      retailers.</h3>
+    {% if retailers.size > 0 %}
+    <div class="container mx-auto">
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-8 items-center">
+        {% for retailer in retailers %}
+        <li>
+          <a class="block text-center" href="{{retailer.url}}" target="_blank">
+            {% if retailer.image and retailer.image != "" %}
+            <img class="mx-auto w-40" src="{{retailer.image}}" alt="{{retailer.name}} logo">
+            {% endif %}
+            <span class="sr-only">{{retailer.name}}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% comment %} Newsletter Section {% endcomment %}
+<section class="relative h-auto overflow-x-hidden">
+  <div class="relative z-1">
+    <div class="bg-loco-umber px-6 pt-8 lg:bg-transparent lg:absolute lg:z-10 lg:top-0 lg:left-0 lg:w-full">
+      <div class="text-white lg:p-8 lg:container lg:mx-auto">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-20">
+          <h2 class="sr-only">Subscribe to the LoCo Newsletter</h2>
+          <p class="text-xl md:text-3xl uppercase font-bold">Stay connected for the latest product news and fresh recipe
+            ideas.
+            Provide your email to receive 10% off your griddle purchase.</p>
+          <div>
+            <form>
+              <div class="lg:w-3/4">
+                <label class="sr-only">Your Email Address</label>
+                <input class="w-full p-4 text-black mb-6" type="email" placeholder="Your Email Address">
+              </div>
+              <button type="submit"
+                class="inline-flex px-6 py-4 text-white items-center justify-center bg-loco-orange font-bold uppercase tracking-wider text-lg">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative z-1 lg:hidden">
+      <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780.28 345.13">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #e15829;
+            }
+
+            .cls-2 {
+              fill: #983820;
+            }
+          </style>
+        </defs>
+        <g id="Layer_2" data-name="Layer 2">
+          <g id="Layer_1-2" data-name="Layer 1">
+            <polygon class="cls-1" points="0 345.13 780.28 94.05 780.28 0 0 235.83 0 345.13" />
+            <polygon class="cls-2" points="0 235.83 780.28 0 0 0 0 235.83" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="hidden lg:block lg:absolute lg:top-0 lg-left:0 lg:w-full lg:z-1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441.16 663">
+        <defs>
+          <style>
+            .cls-x {
+              fill: #e15829;
+            }
+
+            .cls-y {
+              fill: #983820;
+            }
+          </style>
+        </defs>
+        <g id="Layer_2" data-name="Layer 2">
+          <g id="Layer_1-2" data-name="Layer 1">
+            <polygon class="cls-x"
+              points="1297.16 228 311.16 526 125.16 0 0 0 229.16 663 1441.16 273 1439.9 0 1297.16 0 1297.16 228" />
+            <polygon class="cls-y" points="1297.16 228 1297.16 0 125.16 0 311.16 526 1297.16 228" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="relative -z-1 -mt-2/5 lg:mt-0">
+    <img src="/assets/img/bg-image.jpg" alt="" role="presentation" />
+    <div class="absolute right-0 z-1 w-1/2 top-18p lg:top-30p" style="transform: rotate(-20deg); ">
+      <img class="w-full opacity-50 filter saturate-150" src="/assets/img/loco-logo-orange.png" alt=""
+        role="presentation" />
+    </div>
+    <div class="absolute bottom-0 left-0 w-full z-10">
+      <svg class="w-full" viewBox="0 0 1320 516" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1440 0L0 516H1440V0Z" fill="#DCCFAF" />
+      </svg>
+    </div>
+  </div>
+
+</section>
+
+{% comment %} Recipe Section {% endcomment %}
+<section class="">
+  <div class="container mx-auto relative px-3 -mt-20 lg:-mt-1/4">
+    <div class="">
+      {% include 'components/headline', headline_text: 'Recipe Ideas', headline_tag: 'h2' %}
+    </div>
+
+    <div class="pt-12">
+      {% if recipes.size > 0 %}
+      <ul class="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-6">
+        {% for recipe in recipes %}
+        {% if forloop.index == 1 %}
+        {% assign gridClass = "lg:row-span-2 lg:col-span-2 lg:md:row-span-4" %}
+        {% elsif forloop.index == 2 %}
+        {% assign gridClass = "lg:row-span-1 lg:col-span-1" %}
+        {% elsif forloop.index == 3 %}
+        {% assign gridClass = "lg:row-span-1 lg:col-span-1" %}
+        {% endif %}
+        <li class="{{gridClass}} h-full">
+          <article class="relative flex flex-col bg-black h-full">
+            <div class="aspect-w-3 aspect-h-2 lg:h-full top-0 left-0 w-full">
+              <div class="bg-gradient-to-t opacity-80 from-black z-20 w-full h-full"></div>
+              <img class="block h-full object-cover z-10" src="{{recipe.image}}" alt="photo of {{recipe.name}}" />
+            </div>
+            <div class="absolute z-30 bottom-0 left-0 w-full">
+              <div class="p-6 text-white">
+                <h3 class="font-serif font-bold text-2xl">{{recipe.name}}</h3>
+                <div class="inline-flex">
+                  <p>
+                    <span class="sr-only">Difficulty: </span>
+                    {{recipe.difficulty}}
+                  </p>
+                  <span class="mx-3">|</span>
+                  <p>
+                    <span class="sr-only">Time: </span>
+                    {{recipe.time}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% comment %} About Section {% endcomment %}
+<section class="relative z-10">
+  <div class="px-6 py-12 lg:py-20">
+    <div class="container mx-auto mb-8">
+      {% include 'components/headline', headline_text: 'About Loco Cookers', headline_tag: 'h2' %}
+    </div>
+    <div class="max-w-6xl mx-auto">
+      <div class="md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12">
+        <h3 class="text-xl md:text-2xl font-bold uppercase">So feel free to pull a chair and go <span
+            class="normal-case">LoCo</span>
+          with us</h3>
+        <div class="md:col-span-2 lg:col-span-3 text-lg space-y-6">
+          <p>We’ve spent the last 25+ years combined in the outdoor cooking industry, but we cut our teeth (literally)
+            on
+            rib bones and ice-cold pull-top cans on the porch with family and friends. If there’s one thing that rings
+            in
+            our ears from childhood, it’s the voices of our grandparents, aunts, uncles, neighbors and friends saying,
+            “Pull up a chair and take a seat.” Our best memories, toughest lessons, favorite stories and secret recipes
+            were discovered sitting around tables. Based solely on our experiences, we believe inviting somebody to pull
+            up a chair might just be the simplest way to make the world a better place…and that is something we can all
+            do.</p>
+          <p>We’re simple people from East Texas and South Alabama who appreciate the finer things in life. In
+            everything
+            we do, whether it’s work or play, excellence is our standard. We don’t settle for ‘good enough’ and believe
+            you shouldn’t have to, either. That’s why we build each of our products with YOU in mind. Cultivating great
+            experiences is part of our DNA, which is why we focus on functionality and usability when developing our
+            products, hoping to make your experience as good as it should be. So feel free to pull up a chair and go
+            #LoCo
+            with us. </p>
+          <a class="inline-flex px-6 py-4 text-white items-center justify-center bg-loco-orange font-bold uppercase tracking-wider text-lg"
+            href="https://www.lococookers.com/pages/about-loco" target="_blank">Learn More About Loco</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
