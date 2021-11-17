@@ -4,11 +4,10 @@ layout: layouts/base.liquid
 
 {% comment %} Hero Section {% endcomment %}
 <section id="hero" class="relative bg-loco-orange overflow-hidden">
-  <div>
+  <div> 
     <div class="relative">
       <div class="aspect-w-16 aspect-h-9">
-        <img class="w-full h-full object-center object-cover" src="/assets/img/lp-hero.jpg" alt=""
-          role="presentation" />
+          {% image "/assets/img/lp-hero.jpg", ""  %}  
       </div>
       <div>
         <div class="absolute left-0 right-0 translate-y-1/2" style="transform: rotate(12deg); bottom:6%;width: 110%;">
@@ -16,7 +15,7 @@ layout: layouts/base.liquid
             {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
           </span>
         </div>
-      </div>
+      </div> 
       <div class="absolute -bottom-1px left-0 w-full text-loco-orange">
         <svg role="presentation" class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.34 75.29">
           <g>
@@ -164,7 +163,7 @@ layout: layouts/base.liquid
     </div>
   </div>
   <div class="relative -z-1 -mt-2/5 lg:mt-0">
-    <img src="/assets/img/bg-image.jpg" alt="" role="presentation" />
+    {% image "/assets/img/bg-image.jpg", ""  %} 
     <div class="absolute right-0 z-1 w-1/2 top-18p lg:top-30p" style="transform: rotate(-20deg); ">
       <span class="block w-full opacity-50 filter saturate-150 text-loco-orange">
         {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
@@ -201,7 +200,8 @@ layout: layouts/base.liquid
           <article class="relative flex flex-col bg-black h-full">
             <div class="aspect-w-3 aspect-h-2 lg:h-full top-0 left-0 w-full">
               <div class="bg-gradient-to-t opacity-80 from-black z-20 w-full h-full"></div>
-              <img class="block h-full object-cover z-10" src="{{recipe.image}}" alt="photo of {{recipe.name}}" />
+              {% assign _recipeAlt = "photo of" | append: recipe.name %}
+              {% image recipe.image, _recipeAlt, "recipe-image"  %}  
             </div>
             <div class="absolute z-30 bottom-0 left-0 w-full">
               <div class="p-6 text-white">
@@ -236,7 +236,7 @@ layout: layouts/base.liquid
       <div class="mt-8 border-2 border-loco-orange lg:flex">
         <div class="p-4 md:hidden lg:block border-b-2 lg:border-b-0 lg:border-r-2 border-loco-orange lg:w-1/4">
         <div class="bg-loco-orange h-full lg:flex lg:items-center lg:justify-center">
-          <img class="" src="/assets/img/loco-square.png" alt="LoCo Cookers logo">
+          {% image "/assets/img/loco-square.png", "LoCo Cookers logo" %}
         </div>
         </div>
         <div class="lg:flex-1">

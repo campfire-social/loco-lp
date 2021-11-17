@@ -49,6 +49,19 @@
 @tailwind utilities; 
 
 @layer components {
+
+    .recipe-image img {
+        @apply h-full object-cover z-10;
+    }
+
+    .lazy-img {
+        filter: blur(8px);
+        transition: filter 0.3s ease-in;
+        @apply w-full block;
+      }
+      .loaded .lazy-img {
+        filter: unset;
+      }
     .headline {
         @apply relative; 
         min-width: 220px; 
