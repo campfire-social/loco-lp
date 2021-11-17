@@ -107,14 +107,14 @@ layout: layouts/base.liquid
             ideas.
             Provide your email to receive 10% off your griddle purchase.</p>
           <div>
-            <form action="https://formspree.io/f/xbjqnpyv" method="POST">
+            <form id="newsLetterForm" action="{{site.formspree}}" method="POST">
               <div class="lg:w-3/4">
-                <label class="sr-only">Your Email Address</label>
-                <input class="w-full p-4 text-black mb-6" type="email" placeholder="Your Email Address">
+                <label for="emailAddress" class="sr-only">Your Email Address</label>
+                <input name="emailAddress" id="emailAddress" class="w-full p-4 text-black mb-6" type="email" placeholder="Your Email Address" required>
               </div>
-              <button type="submit"
-                class="inline-flex px-6 py-4 text-white items-center justify-center bg-loco-orange font-bold uppercase tracking-wider text-lg">Subscribe</button>
+              {%include "components/button", btn_id: "newsLetterFormSend", btn_text: "Subscribe", btn_type: "submit" %}
             </form>
+            <p class="text-white font-semibold text-xl" id="newsLetterFormStatus"></p>
           </div>
         </div>
       </div>
@@ -330,8 +330,7 @@ layout: layouts/base.liquid
             products, hoping to make your experience as good as it should be. So feel free to pull up a chair and go
             #LoCo
             with us. </p>
-          <a class="inline-flex px-6 py-4 text-white items-center justify-center bg-loco-orange font-bold uppercase tracking-wider text-lg"
-            href="https://www.lococookers.com/pages/about-loco" target="_blank">Learn More About Loco</a>
+            {%include "components/button", btn_text: "Learn More About Loco", btn_url: "https://www.lococookers.com/pages/about-loco", btn_target: "_blank" %}
         </div>
       </div>
     </div>

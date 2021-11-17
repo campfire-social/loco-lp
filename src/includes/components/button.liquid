@@ -1,0 +1,17 @@
+{% assign _url = btn_link %}
+{% assign _target = btn_target %}
+{% assign _text = btn_text %}
+{% assign _target = btn_target %}
+{% assign _id = btn_id %}
+{% assign _type = btn_type | default: "button" %}
+
+{% if _url and _url != "" %} 
+  {% assign _tag = "a" %}
+{% else %} 
+  {% assign _tag = "button" %}
+{% endif %}
+
+<{{_tag}} {% if _id %}id="{{_id}}"{% endif %}  class="inline-flex px-6 py-4 text-white items-center justify-center bg-loco-orange hover:bg-black focus:bg-black transition-colors font-bold uppercase tracking-wider text-lg" {% unless _url %} type="{{_type}}" {% endunless %}
+            {% if _url %}href="{{_url}}"{% endif %} {% if _target %}target="{{_target}}" {% endif %}>
+            {{_text}}
+</{{_tag}}>

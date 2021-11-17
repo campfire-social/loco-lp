@@ -38,6 +38,7 @@ lazyLoad(lazyPictures, (pictureElement) => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+
     var els = document.querySelectorAll('a[href^="#"]');
     for (var i=0; i < els.length; i++) {
         els[i].addEventListener("click", function(event) {
@@ -45,6 +46,33 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
           });
     }
+
+    var contactForm = document.querySelector('#newsLetterForm'),
+    inputName = contactForm.querySelector('[name="emailAddress"]'),
+    sendButton = contactForm.querySelector('#newsLetterFormSend'),
+    formMsg = document.querySelector('#newsLetterFormStatus');
+
+    sendButton.addEventListener('click', function(event){
+      event.preventDefault(); // prevent the form to do the post.
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', contactForm.action, true);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+      xhr.onloadend = function (res) {
+        if (res.target.status === 200){
+          contactForm.classList.add('hidden');
+          formMsg.innerHTML = 'Thanks for signing up!';
+        } else {
+            formMsg.innerHTML = 'Oops! There was a problem getting you subscribed.';
+        }
+      }
+
+      xhr.send("name=" + inputName.value);
+    });
+
+
   }, false);
 
 

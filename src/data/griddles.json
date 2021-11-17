@@ -1,6 +1,7 @@
 [
     {
         "name": "Product Name",
+        "urls": [],
         "image": "/assets/img/tabletop-griddle.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         "details": [
@@ -11,6 +12,7 @@
     },
     {
         "name": "Product Name",
+        "urls": [],
         "image": "/assets/img/tabletop-griddle.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         "details": [
@@ -21,6 +23,7 @@
     },
     {
         "name": "Product Name",
+        "urls": [],
         "image": "/assets/img/tabletop-griddle.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         "details": [
