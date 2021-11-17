@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{site.lang}}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{site.title}}</title>
-
+  <meta name="description" content="{{site.description}}" />
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
-
+  {% if site.open_graph %}
+    <meta property="og:title" content="{{site.open_graph.title}}" />
+    <meta property="og:description" content="{{site.open_graph.description}}" />
+    <meta property="og:image" content="{{site.open_graph.image}}" />
+    <meta property="og:url" content="{{site.open_graph.url}}" />
+    <meta property="og:type" content="{{site.open_graph.type}}" />
+    <meta property="og:site_name" content="{{site.open_graph.site_name}}">
+    {% if site.open_graph.fb_app_id != "" %}
+      <meta property="fb:app_id" content="{{site.open_graph.fb_app_id}}" />
+    {% endif %}
+  {% endif %}
+  {% if site.twitter_meta %}
+    <meta name="twitter:title" content="{{site.twitter_meta.title}}">
+    <meta name="twitter:description" content="{{site.twitter_meta.description}}">
+    <meta name="twitter:image" content=" {{site.twitter_meta.image}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{site.twitter_meta.username}}">
+  {% endif %}
+  
   {% bundledCss %}
 </head>
 <body class="w-full bg-loco-tan">

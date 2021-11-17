@@ -1,5 +1,23 @@
 {
-    "title": "LoCo Cooker Griddles",
+    "title": "LoCo Cookers Griddles",
     "description": "Eleventy project with Webpack and Tailwind CSS",
-    "url": "http://example.com"
+    "url": "http://example.com", 
+    "lang": "en",
+    "open_graph": {
+        "title": "LoCo Cookers Griddles",
+        "url": "#",
+        "image": "/assets/img/og-img.jpg",
+        "type": "website",
+        "description": "Introducing the new LoCo Cookers Griddles",
+        "site_name": "LoCo Cookers",
+        "fb_app_id": ""
+    },
+    "twitter_meta": {
+        "title": "LoCo Cookers Griddles",
+        "url": "#",
+        "image": "/assets/img/tw-img.jpg",
+        "type": "website",
+        "description": "Introducing the new LoCo Cookers Griddles",
+        "username": "@lococookers"
+    }
   }
