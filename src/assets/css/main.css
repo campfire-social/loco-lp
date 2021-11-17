@@ -2,6 +2,11 @@
 @tailwind base;
 @tailwind components;
 /* purgecss end ignore */
+@layer base {
+
+    html {
+        scroll-behavior: smooth;
+      }
 
 @font-face {
     font-family: 'Clarendon';
@@ -39,7 +44,7 @@
     font-display: swap;
 }
 
-
+}
 
 @tailwind utilities; 
 
