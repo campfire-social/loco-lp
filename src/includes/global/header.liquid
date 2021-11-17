@@ -2,8 +2,8 @@
 
 <header class="absolute top-2 left-0 z-40 w-full">
   <div class="px-8 py-6 flex items-center">
-    <a href="/" class="block w-24">
-      <img src="/assets/img/loco-logo-white.png" alt="LoCo Cookers">
+    <a href="https://www.lococookers.com" target="_blank" class="block w-24 text-white">
+      {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
       <span class="sr-only">LoCo Cookers</span>
     </a>
     {% if _nav_items.size > 0 %}
@@ -11,7 +11,7 @@
       <ul class="flex">
         {% for _item in _nav_items  %}
         <li>
-          {% include 'components/nav-item', nav_link: _item.url, nav_text: _item.text %}
+          {% include 'components/nav-item', nav_link: _item.url, nav_text: _item.text, nav_target: _item.target %}
         </li>
         {% endfor %}
       </ul>

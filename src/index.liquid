@@ -12,12 +12,13 @@ layout: layouts/base.liquid
       </div>
       <div>
         <div class="absolute left-0 right-0 translate-y-1/2" style="transform: rotate(12deg); bottom:6%;width: 110%;">
-          <img class="w-full opacity-60 filter saturate-150" src="/assets/img/loco-logo-orange.png" alt=""
-            role="presentation" />
+          <span class="block w-full opacity-60 filter saturate-150 text-loco-orange">
+            {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
+          </span>
         </div>
       </div>
-      <div class="absolute bottom-0 left-0 w-full text-loco-orange">
-        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.34 75.29">
+      <div class="absolute -bottom-1px left-0 w-full text-loco-orange">
+        <svg role="presentation" class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.34 75.29">
           <g>
             <g id="Layer_1-2" data-name="Layer 1">
               <polygon points="480.33 44.28 324.66 67.26 0 0 0 75.29 480.34 75.29 480.33 44.28" />
@@ -96,7 +97,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} Newsletter Section {% endcomment %}
-<section id="newsletter" class="relative h-auto overflow-x-hidden">
+<section id="newsletter" class="relative h-auto">
   <div class="relative z-1">
     <div class="bg-loco-umber px-6 pt-8 lg:bg-transparent lg:absolute lg:z-10 lg:top-0 lg:left-0 lg:w-full">
       <div class="text-white lg:p-8 lg:container lg:mx-auto">
@@ -118,8 +119,8 @@ layout: layouts/base.liquid
         </div>
       </div>
     </div>
-    <div class="relative z-1 lg:hidden">
-      <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780.28 345.13">
+    <div class="relative z-1 lg:hidden -mt-1px">
+      <svg role="presentation" class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780.28 345.13">
         <defs>
           <style>
             .cls-1 {
@@ -139,7 +140,7 @@ layout: layouts/base.liquid
         </g>
       </svg>
     </div>
-    <div class="hidden lg:block lg:absolute lg:top-0 lg-left:0 lg:w-full lg:z-1">
+    <div class="hidden lg:block lg:absolute lg:-top-1px lg-left:0 lg:w-full lg:z-1">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441.16 663">
         <defs>
           <style>
@@ -165,11 +166,12 @@ layout: layouts/base.liquid
   <div class="relative -z-1 -mt-2/5 lg:mt-0">
     <img src="/assets/img/bg-image.jpg" alt="" role="presentation" />
     <div class="absolute right-0 z-1 w-1/2 top-18p lg:top-30p" style="transform: rotate(-20deg); ">
-      <img class="w-full opacity-50 filter saturate-150" src="/assets/img/loco-logo-orange.png" alt=""
-        role="presentation" />
+      <span class="block w-full opacity-50 filter saturate-150 text-loco-orange">
+        {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
+      </span>
     </div>
-    <div class="absolute bottom-0 left-0 w-full z-10">
-      <svg class="w-full" viewBox="0 0 1320 516" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="absolute -bottom-1px left-0 w-full z-10">
+      <svg role="presentation" class="w-full" viewBox="0 0 1320 516" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440 0L0 516H1440V0Z" fill="#DCCFAF" />
       </svg>
     </div>

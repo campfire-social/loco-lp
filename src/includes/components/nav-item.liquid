@@ -1,6 +1,7 @@
 {% assign _url = nav_link %}
 {% assign _text = nav_text %}
+{% assign _target = nav_target | default: "_self" %}
 
-<a class="inline-block hover:bg-black px-6 py-3 text-white uppercase text-lg font-bold tracking-wide cursor-pointer transition-colors" href="{{_url}}">
+<a class="inline-block hover:bg-black px-6 py-3 text-white uppercase text-lg font-bold tracking-wide cursor-pointer transition-colors" href="{{_url}}" target="">
   <span>{{_text}}</span>
 </a>

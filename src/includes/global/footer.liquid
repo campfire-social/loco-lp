@@ -4,13 +4,16 @@
     <img src="/assets/img/footer-img.png" alt="" role="presentation">
   </div>
   <div class="absolute bottom-0 left-0 w-full z-20" style="">
-    <svg class="w-full" viewBox="0 0 1126 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg role="presentation" class="w-full" viewBox="0 0 1126 350" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1126 350V0L0 350H1126Z" fill="black" />
     </svg>
   </div>
   <div class="absolute bottom-4 lg:bottom-8 right-4 lg:right-8 z-30">
     <div>
-      <img class="w-20" src="/assets/img/loco-logo-white.png" alt="LoCo Cookers">
+      <a href="https://www.lococookers.com" target="_blank" class="block w-20 text-white">
+      {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
+      <span class="sr-only">LoCo Cookers</span>
+    </a>
       <span class="sr-only">LoCo Cookers</span>
     </div>
   </div>
