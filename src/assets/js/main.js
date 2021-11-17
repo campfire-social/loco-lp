@@ -38,9 +38,13 @@ lazyLoad(lazyPictures, (pictureElement) => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    
-    
-
+    var els = document.querySelectorAll('a[href^="#"]');
+    for (var i=0; i < els.length; i++) {
+        els[i].addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+          });
+    }
   }, false);
 
 

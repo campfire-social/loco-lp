@@ -4,10 +4,10 @@ layout: layouts/base.liquid
 
 {% comment %} Hero Section {% endcomment %}
 <section id="hero" class="relative bg-loco-orange overflow-hidden">
-  <div> 
+  <div>
     <div class="relative">
       <div class="aspect-w-16 aspect-h-9">
-          {% image "/assets/img/lp-hero.jpg", ""  %}  
+        {% image "/assets/img/lp-hero.jpg", ""  %}
       </div>
       <div>
         <div class="absolute left-0 right-0 translate-y-1/2" style="transform: rotate(12deg); bottom:6%;width: 110%;">
@@ -15,7 +15,7 @@ layout: layouts/base.liquid
             {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
           </span>
         </div>
-      </div> 
+      </div>
       <div class="absolute -bottom-1px left-0 w-full text-loco-orange">
         <svg role="presentation" class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.34 75.29">
           <g>
@@ -99,10 +99,11 @@ layout: layouts/base.liquid
 <section id="newsletter" class="relative h-auto">
   <div class="relative z-1">
     <div class="bg-loco-umber px-6 pt-8 lg:bg-transparent lg:absolute lg:z-10 lg:top-0 lg:left-0 lg:w-full">
-      <div class="text-white lg:p-8 lg:container lg:mx-auto">
+      <div class="text-white lg:p-8 lg:container lg:mx-auto xl:max-w-7xl">
         <div class="lg:grid lg:grid-cols-2 lg:gap-20">
           <h2 class="sr-only">Subscribe to the LoCo Newsletter</h2>
-          <p class="text-xl md:text-3xl uppercase font-bold mb-8">Stay connected for the latest product news and fresh recipe
+          <p class="text-xl md:text-3xl uppercase font-bold mb-8">Stay connected for the latest product news and fresh
+            recipe
             ideas.
             Provide your email to receive 10% off your griddle purchase.</p>
           <div>
@@ -163,7 +164,7 @@ layout: layouts/base.liquid
     </div>
   </div>
   <div class="relative -z-1 -mt-2/5 lg:mt-0">
-    {% image "/assets/img/bg-image.jpg", ""  %} 
+    {% image "/assets/img/bg-image.jpg", ""  %}
     <div class="absolute right-0 z-1 w-1/2 top-18p lg:top-30p" style="transform: rotate(-20deg); ">
       <span class="block w-full opacity-50 filter saturate-150 text-loco-orange">
         {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
@@ -201,7 +202,7 @@ layout: layouts/base.liquid
             <div class="aspect-w-3 aspect-h-2 lg:h-full top-0 left-0 w-full">
               <div class="bg-gradient-to-t opacity-80 from-black z-20 w-full h-full"></div>
               {% assign _recipeAlt = "photo of" | append: recipe.name %}
-              {% image recipe.image, _recipeAlt, "recipe-image"  %}  
+              {% image recipe.image, _recipeAlt, "recipe-image"  %}
             </div>
             <div class="absolute z-30 bottom-0 left-0 w-full">
               <div class="p-6 text-white">
@@ -235,44 +236,48 @@ layout: layouts/base.liquid
       {% include 'components/headline', headline_text: 'About Loco Cookers', headline_tag: 'h2' %}
       <div class="mt-8 border-2 border-loco-orange lg:flex">
         <div class="p-4 md:hidden lg:block border-b-2 lg:border-b-0 lg:border-r-2 border-loco-orange lg:w-1/4">
-        <div class="bg-loco-orange h-full lg:flex lg:items-center lg:justify-center">
-          {% image "/assets/img/loco-square.png", "LoCo Cookers logo" %}
+          <div class="bg-loco-orange h-full lg:flex lg:items-center lg:justify-center">
+            {% image "/assets/img/loco-square.png", "LoCo Cookers logo" %}
+          </div>
         </div>
-        </div>
-        <div class="lg:flex-1">
-          <div class="border-b-2 border-loco-orange lg:flex lg:w-full">
-            <div class="flex items-center justify-center w-full p-4 border-b-2 border-loco-orange lg:border-b-0 lg:border-r-2">
+        <div class="lg:flex-1 flex flex-col">
+          <div class="border-b-2 border-loco-orange lg:flex lg:w-full lg:flex-1">
+            <div
+              class="flex items-center justify-center w-full p-4 border-b-2 border-loco-orange lg:border-b-0 lg:border-r-2">
               <span class="block mr-4">
                 {% include 'icons/heat' icon_class: 'block' %}
               </span>
               <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Crank up the heat</p>
             </div>
             <div class="flex w-full">
-              <div class="flex-1 flex items-center justify-center  p-4">
+              <div class="flex-1 flex items-center justify-center  p-4 lg:px-8">
                 <span class="sm:mr-6 lg:mr-4">
                   {% include 'icons/clean' icon_class: 'mx-auto block' %}
                 </span>
-                <p class="hidden sm:block uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-umber">Cleans
+                <p
+                  class="hidden sm:block uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-umber">
+                  Cleans
                   <br> up Fast</p>
               </div>
-              <div class="flex-intial p-4 border-l-2 border-loco-orange flex items-center justify-center">
+              <div class="flex-intial p-4 lg:px-8 border-l-2 border-loco-orange flex items-center justify-center">
                 <span class="block">
                   {% include 'icons/weather' icon_class: 'block' %}
                 </span>
               </div>
-              <div class="flex-initial flex-initial p-4 border-l-2 border-loco-orange flex items-center justify-center">
+              <div class="flex-initial flex-initial p-4 lg:px-8 border-l-2 border-loco-orange flex items-center justify-center">
                 <span class="block">
                   {% include 'icons/strong' icon_class: 'block' %}
                 </span>
               </div>
             </div>
           </div>
-          <div class="px-4 py-8 text-center border-b-2 border-loco-orange lg:w-full">
-            <h3 class="font-bold uppercase tracking-wide text-loco-orange text-2xl md:text-3xl">Everyone has a seat at
+          <div class="px-4 py-8  lg:px-8 text-center border-b-2 border-loco-orange lg:w-full lg:flex-1 flex flex-col items-center justify-center">
+            <h3 class="font-bold uppercase tracking-wide text-loco-orange text-2xl md:text-3xl xl:text-4xl">Everyone has a seat at
               the table</h3>
           </div>
-          <div class="lg:flex lg:w-full">
-            <div class="flex items-center justify-center p-4 border-b-2 border-loco-orange lg:border-b-0 lg:border-l-2 lg:flex-1 lg:order-2">
+          <div class="lg:flex lg:w-full lg:flex-1">
+            <div
+              class="flex items-center justify-center p-4 lg:px-8 border-b-2 border-loco-orange lg:border-b-0 lg:border-l-2 lg:flex-1 lg:order-2">
               <span class="block mr-4">
                 {% include 'icons/timer' icon_class: 'block' %}
               </span>
@@ -281,18 +286,19 @@ layout: layouts/base.liquid
             </div>
             <div class="flex items-center lg:order-1">
               <div class="flex-1 border-loco-orange h-full">
-                <div class="flex items-center justify-center h-full p-4">
+                <div class="flex items-center justify-center h-full p-4 lg:px-8">
                   <span class="block sm:mr-4">
                     {% include 'icons/approved' icon_class: 'block' %}
                   </span>
-                  <p class="hidden sm:block font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Simplified</p>
+                  <p class="hidden sm:block font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">
+                    Simplified</p>
                 </div>
               </div>
-              <div class="flex-initial p-4 border-l-2 border-loco-orange">
+              <div class="flex-initial p-4 lg:px-8 border-l-2 border-loco-orange">
                 <div class="flex items-center justify-center">
-                <span class="block">
-                  {% include 'icons/party' icon_class: 'block mx-auto' %}
-                </span>
+                  <span class="block">
+                    {% include 'icons/party' icon_class: 'block mx-auto' %}
+                  </span>
                 </div>
               </div>
             </div>
