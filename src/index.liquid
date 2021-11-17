@@ -60,12 +60,12 @@ layout: layouts/base.liquid
         {% for griddle in griddles %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
         {% if thecycle == 'even' %}
-          {% assign _even = true %}
+        {% assign _even = true %}
         {% else %}
-          {% assign _even = false %}
+        {% assign _even = false %}
         {% endif %}
         <li class="{%if forloop.last%}border-b-2 border-loco-tan{%endif%}">
-        {% include 'components/product', content: griddle, even: _even  %}
+          {% include 'components/product', content: griddle, even: _even  %}
         </li>
         {% endfor %}
       </ul>
@@ -231,6 +231,73 @@ layout: layouts/base.liquid
   <div class="px-6 py-12 lg:py-20">
     <div class="container mx-auto mb-8">
       {% include 'components/headline', headline_text: 'About Loco Cookers', headline_tag: 'h2' %}
+      <div class="border-2 border-loco-orange lg:flex">
+        <div class="p-4 md:hidden lg:block lg:border-r-2 lg:border-loco-orange lg:w-1/4">
+        <div class="bg-loco-orange h-full lg:flex lg:items-center lg:justify-center">
+          <img class="" src="/assets/img/loco-square.png" alt="LoCo Cookers logo">
+        </div>
+        </div>
+        <div class="lg:flex-1">
+          <div class="border-b-2 border-loco-orange lg:flex lg:w-full">
+            <div class="flex items-center justify-center w-full p-4 border-b-2 border-loco-orange lg:border-b-0 lg:border-r-2">
+              <span class="block mr-4">
+                {% include 'icons/heat' icon_class: 'block' %}
+              </span>
+              <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Crank up the heat</p>
+            </div>
+            <div class="flex w-full">
+              <div class="flex-1 flex items-center justify-center  p-4">
+                <span class="sm:mr-6 lg:mr-4">
+                  {% include 'icons/clean' icon_class: 'mx-auto block' %}
+                </span>
+                <p class="hidden sm:block uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-umber">Cleans
+                  <br> up Fast</p>
+              </div>
+              <div class="flex-intial p-4 border-l-2 border-loco-orange flex items-center justify-center">
+                <span class="block">
+                  {% include 'icons/weather' icon_class: 'block' %}
+                </span>
+              </div>
+              <div class="flex-initial flex-initial p-4 border-l-2 border-loco-orange flex items-center justify-center">
+                <span class="block">
+                  {% include 'icons/strong' icon_class: 'block' %}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 py-8 text-center border-b-2 border-loco-orange lg:w-full">
+            <h3 class="font-bold uppercase tracking-wide text-loco-orange text-2xl md:text-3xl">Everyone has a seat at
+              the table</h3>
+          </div>
+          <div class="lg:flex lg:w-full">
+            <div class="flex items-center justify-center p-4 border-b-2 border-loco-orange lg:border-b-0 lg:flex-1">
+              <span class="block mr-4">
+                {% include 'icons/timer' icon_class: 'block' %}
+              </span>
+              <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Zero to party in no time
+              </p>
+            </div>
+            <div class="flex items-center">
+              <div class="flex-1 border-loco-orange lg:border-l-2 h-full">
+                <div class="flex items-center justify-center h-full p-4">
+                  <span class="block sm:mr-4">
+                    {% include 'icons/approved' icon_class: 'block' %}
+                  </span>
+                  <p class="hidden sm:block font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Simplified</p>
+                </div>
+              </div>
+              <div class="flex-initial p-4 border-l-2 border-loco-orange">
+                <div class="flex items-center justify-center">
+                <span class="block">
+                  {% include 'icons/party' icon_class: 'block mx-auto' %}
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="max-w-6xl mx-auto">
       <div class="md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12">
