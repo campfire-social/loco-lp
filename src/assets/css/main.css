@@ -46,7 +46,7 @@
 @layer components {
     .headline {
         @apply relative; 
-        min-width: 200px; 
+        min-width: 220px; 
         margin-bottom: 20px;
     }
     .headline::after {

@@ -11,21 +11,21 @@
 <div class="relative page-wrapper overflow-x-hidden">
   
 
-<header class="absolute top-0 left-0 z-10 w-full">
-  <div class="px-6 py-4 flex items-center">
+<header class="absolute top-2 left-0 z-40 w-full">
+  <div class="px-8 py-6 flex items-center">
     <a href="/" class="block w-24">
       <img src="/assets/img/loco-logo-white.png" alt="LoCo Cookers">
       <span class="sr-only">LoCo Cookers</span>
     </a>
     
-    <nav class="hidden">
-      <ul>
+    <nav class="ml-auto mr-8">
+      <ul class="flex">
         
         <li>
           
 
 
-<a href="#griddles">
+<a class="inline-block hover:bg-black px-6 py-3 text-white uppercase text-lg font-bold tracking-wide cursor-pointer transition-colors" href="#griddles">
   <span>Griddles</span>
 </a>
         </li>
@@ -34,7 +34,7 @@
           
 
 
-<a href="#recipes">
+<a class="inline-block hover:bg-black px-6 py-3 text-white uppercase text-lg font-bold tracking-wide cursor-pointer transition-colors" href="#recipes">
   <span>Recipes</span>
 </a>
         </li>
@@ -43,7 +43,7 @@
           
 
 
-<a href="#about">
+<a class="inline-block hover:bg-black px-6 py-3 text-white uppercase text-lg font-bold tracking-wide cursor-pointer transition-colors" href="#about">
   <span>About</span>
 </a>
         </li>
@@ -52,7 +52,7 @@
           
 
 
-<a href="https://www.google.com">
+<a class="inline-block hover:bg-black px-6 py-3 text-white uppercase text-lg font-bold tracking-wide cursor-pointer transition-colors" href="https://www.lococookers.com/pages/service-and-support">
   <span>Contact</span>
 </a>
         </li>
@@ -115,11 +115,11 @@
     </div>
   </div>
   
-  <div class="px-2 md:px-6 mt-6 md:mt-10">
+  <div class="px-2 md:px-3 mt-6 md:mt-10">
     <div class="max-w-4xl lg:container mx-auto mb-12 lg:mb-16">
        
 
- <h3 class="headline tracking-wider inline-block px-4 py-2 bg-loco-umber text-loco-tan font-bold uppercase text-lg">
+ <h3 class="headline tracking-wider inline-block px-4 py-2 bg-loco-umber text-loco-tan font-bold uppercase text-lg lg:text-xl xl:text-2xl">
  <span>The Griddles</span>
  </h3>
       <ul class="mt-6 space-y-8 lg:space-y-0">
@@ -240,14 +240,26 @@
           </div>
         </div>
         
-        <div class="py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3">
-          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent">
-            <option value="">Select a store to buy</option>
+        <div class=" py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3 flex items-center w-full">
+          <div class="relative w-full">
+          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent text-loco-tan uppercase text-xl font-bold tracking-wider cursor-pointer pr-12">
+            <option value="" disabled selected >Select a store to buy</option>
             <option value="">Walmart</option>
             <option value="">Home Depot</option>
             <option value="">Lowe's</option>
             <option value="">Ace Hardware</option>
           </select>
+          <svg class=" absolute top-1/2 right-4 transform -translate-y-1/2" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <rect width="26" height="26" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_2_90" transform="scale(0.0078125)"/>
+            </pattern>
+            <image id="image0_2_90" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAB+klEQVR4nO3cO25TURiF0QwqVBRUoBQwoxSUTBYJRUIW1aYwR6CA8X2fx12rdvHL33Z048IPDwAAAAAAAAAAAAAAAAAAAAAAAAAAAPQuyXOSp9p3nE2SpyTPtY/4nKsfST5VPeZEknxIcvn13n+pdUSJHyM4zqv4qTKCf8Q3ggPciH/sCP4T3wh2dCf+MSPI9YFviks8GG4m1we+e/GL/R4MJ66w8JdgAwve84+tHWQECzUXf8VhRjBTs/FXHGgEEzUff8WhRnBHN/FXHGwEN3QXvzCC9bqNXxjBct3HL4xgvmHiF0Yw3XDxCyO4b9j4hRHcNnz8wgj+dpr4hRH8drr4hRGcOH5x5hGcPn5xxhGI/8qZRiD+DWcYgfh3jDwC8ScacQTizzTSCMRfaIQRiL9SzyMQfyM9jkD8jfU0AvF30sMIxN9ZyyMQ/yAtjkD8g7U0AvEraWEE4ldWcwTiN6LGCMRvzJEjEL9RR4xA/MbtOQLxO7HHCMTvzJYjEL9TW4xA/M6tGYH4g1gyAvEHk3m/qnmZ+Vq/ftqDmZ/qKXzye7PhCMTv1QYjEL93K0Yg/igWjED80cwYgfijmjAC8UeX298T+D//LJK8S/LyR/zvSd7XvosDJXmT5GuSb0ne1r6HCpI8JnmsfQcAAAAAAAAAAAAAAADAPD8BshG63yz7/Y0AAAAASUVORK5CYII="/>
+            </defs>
+            </svg>
+            </div>
         </div>
 
       </div>
@@ -375,14 +387,26 @@
           </div>
         </div>
         
-        <div class="py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3">
-          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent">
-            <option value="">Select a store to buy</option>
+        <div class=" py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3 flex items-center w-full">
+          <div class="relative w-full">
+          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent text-loco-tan uppercase text-xl font-bold tracking-wider cursor-pointer pr-12">
+            <option value="" disabled selected >Select a store to buy</option>
             <option value="">Walmart</option>
             <option value="">Home Depot</option>
             <option value="">Lowe's</option>
             <option value="">Ace Hardware</option>
           </select>
+          <svg class=" absolute top-1/2 right-4 transform -translate-y-1/2" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <rect width="26" height="26" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_2_90" transform="scale(0.0078125)"/>
+            </pattern>
+            <image id="image0_2_90" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAB+klEQVR4nO3cO25TURiF0QwqVBRUoBQwoxSUTBYJRUIW1aYwR6CA8X2fx12rdvHL33Z048IPDwAAAAAAAAAAAAAAAAAAAAAAAAAAAPQuyXOSp9p3nE2SpyTPtY/4nKsfST5VPeZEknxIcvn13n+pdUSJHyM4zqv4qTKCf8Q3ggPciH/sCP4T3wh2dCf+MSPI9YFviks8GG4m1we+e/GL/R4MJ66w8JdgAwve84+tHWQECzUXf8VhRjBTs/FXHGgEEzUff8WhRnBHN/FXHGwEN3QXvzCC9bqNXxjBct3HL4xgvmHiF0Yw3XDxCyO4b9j4hRHcNnz8wgj+dpr4hRH8drr4hRGcOH5x5hGcPn5xxhGI/8qZRiD+DWcYgfh3jDwC8ScacQTizzTSCMRfaIQRiL9SzyMQfyM9jkD8jfU0AvF30sMIxN9ZyyMQ/yAtjkD8g7U0AvEraWEE4ldWcwTiN6LGCMRvzJEjEL9RR4xA/MbtOQLxO7HHCMTvzJYjEL9TW4xA/M6tGYH4g1gyAvEHk3m/qnmZ+Vq/ftqDmZ/qKXzye7PhCMTv1QYjEL93K0Yg/igWjED80cwYgfijmjAC8UeX298T+D//LJK8S/LyR/zvSd7XvosDJXmT5GuSb0ne1r6HCpI8JnmsfQcAAAAAAAAAAAAAAADAPD8BshG63yz7/Y0AAAAASUVORK5CYII="/>
+            </defs>
+            </svg>
+            </div>
         </div>
 
       </div>
@@ -398,7 +422,7 @@
         
           
         
-        <li class="">
+        <li class="border-b-2 border-loco-tan">
         
 
 
@@ -510,14 +534,26 @@
           </div>
         </div>
         
-        <div class="py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3">
-          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent">
-            <option value="">Select a store to buy</option>
+        <div class=" py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3 flex items-center w-full">
+          <div class="relative w-full">
+          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent text-loco-tan uppercase text-xl font-bold tracking-wider cursor-pointer pr-12">
+            <option value="" disabled selected >Select a store to buy</option>
             <option value="">Walmart</option>
             <option value="">Home Depot</option>
             <option value="">Lowe's</option>
             <option value="">Ace Hardware</option>
           </select>
+          <svg class=" absolute top-1/2 right-4 transform -translate-y-1/2" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <rect width="26" height="26" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_2_90" transform="scale(0.0078125)"/>
+            </pattern>
+            <image id="image0_2_90" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAB+klEQVR4nO3cO25TURiF0QwqVBRUoBQwoxSUTBYJRUIW1aYwR6CA8X2fx12rdvHL33Z048IPDwAAAAAAAAAAAAAAAAAAAAAAAAAAAPQuyXOSp9p3nE2SpyTPtY/4nKsfST5VPeZEknxIcvn13n+pdUSJHyM4zqv4qTKCf8Q3ggPciH/sCP4T3wh2dCf+MSPI9YFviks8GG4m1we+e/GL/R4MJ66w8JdgAwve84+tHWQECzUXf8VhRjBTs/FXHGgEEzUff8WhRnBHN/FXHGwEN3QXvzCC9bqNXxjBct3HL4xgvmHiF0Yw3XDxCyO4b9j4hRHcNnz8wgj+dpr4hRH8drr4hRGcOH5x5hGcPn5xxhGI/8qZRiD+DWcYgfh3jDwC8ScacQTizzTSCMRfaIQRiL9SzyMQfyM9jkD8jfU0AvF30sMIxN9ZyyMQ/yAtjkD8g7U0AvEraWEE4ldWcwTiN6LGCMRvzJEjEL9RR4xA/MbtOQLxO7HHCMTvzJYjEL9TW4xA/M6tGYH4g1gyAvEHk3m/qnmZ+Vq/ftqDmZ/qKXzye7PhCMTv1QYjEL93K0Yg/igWjED80cwYgfijmjAC8UeX298T+D//LJK8S/LyR/zvSd7XvosDJXmT5GuSb0ne1r6HCpI8JnmsfQcAAAAAAAAAAAAAAADAPD8BshG63yz7/Y0AAAAASUVORK5CYII="/>
+            </defs>
+            </svg>
+            </div>
         </div>
 
       </div>
@@ -666,12 +702,12 @@
 </section>
 
 
-<section class="">
-  <div class="container mx-auto relative px-3 -mt-20 lg:-mt-1/4">
+<section class="px-3">
+  <div class="container mx-auto relative -mt-20 lg:-mt-1/4">
     <div class="">
        
 
- <h2 class="headline tracking-wider inline-block px-4 py-2 bg-loco-umber text-loco-tan font-bold uppercase text-lg">
+ <h2 class="headline tracking-wider inline-block px-4 py-2 bg-loco-umber text-loco-tan font-bold uppercase text-lg lg:text-xl xl:text-2xl">
  <span>Recipe Ideas</span>
  </h2>
     </div>
@@ -776,7 +812,7 @@
     <div class="container mx-auto mb-8">
        
 
- <h2 class="headline tracking-wider inline-block px-4 py-2 bg-loco-umber text-loco-tan font-bold uppercase text-lg">
+ <h2 class="headline tracking-wider inline-block px-4 py-2 bg-loco-umber text-loco-tan font-bold uppercase text-lg lg:text-xl xl:text-2xl">
  <span>About Loco Cookers</span>
  </h2>
     </div>

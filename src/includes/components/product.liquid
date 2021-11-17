@@ -51,14 +51,26 @@
           </div>
         </div>
         {% comment %} Product Dropdown {% endcomment %}
-        <div class="py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3">
-          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent">
-            <option value="">Select a store to buy</option>
+        <div class=" py-6 md:pl-6 lg:p-6 border-t-2 border-loco-tan md:col-span-2 xl:h-1/3 flex items-center w-full">
+          <div class="relative w-full">
+          <select class="w-full appearance-none border-2 border-loco-tan p-4 bg-transparent text-loco-tan uppercase text-xl font-bold tracking-wider cursor-pointer pr-12">
+            <option value="" disabled selected >Select a store to buy</option>
             <option value="">Walmart</option>
             <option value="">Home Depot</option>
             <option value="">Lowe's</option>
             <option value="">Ace Hardware</option>
           </select>
+          <svg class=" absolute top-1/2 right-4 transform -translate-y-1/2" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <rect width="26" height="26" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_2_90" transform="scale(0.0078125)"/>
+            </pattern>
+            <image id="image0_2_90" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAB+klEQVR4nO3cO25TURiF0QwqVBRUoBQwoxSUTBYJRUIW1aYwR6CA8X2fx12rdvHL33Z048IPDwAAAAAAAAAAAAAAAAAAAAAAAAAAAPQuyXOSp9p3nE2SpyTPtY/4nKsfST5VPeZEknxIcvn13n+pdUSJHyM4zqv4qTKCf8Q3ggPciH/sCP4T3wh2dCf+MSPI9YFviks8GG4m1we+e/GL/R4MJ66w8JdgAwve84+tHWQECzUXf8VhRjBTs/FXHGgEEzUff8WhRnBHN/FXHGwEN3QXvzCC9bqNXxjBct3HL4xgvmHiF0Yw3XDxCyO4b9j4hRHcNnz8wgj+dpr4hRH8drr4hRGcOH5x5hGcPn5xxhGI/8qZRiD+DWcYgfh3jDwC8ScacQTizzTSCMRfaIQRiL9SzyMQfyM9jkD8jfU0AvF30sMIxN9ZyyMQ/yAtjkD8g7U0AvEraWEE4ldWcwTiN6LGCMRvzJEjEL9RR4xA/MbtOQLxO7HHCMTvzJYjEL9TW4xA/M6tGYH4g1gyAvEHk3m/qnmZ+Vq/ftqDmZ/qKXzye7PhCMTv1QYjEL93K0Yg/igWjED80cwYgfijmjAC8UeX298T+D//LJK8S/LyR/zvSd7XvosDJXmT5GuSb0ne1r6HCpI8JnmsfQcAAAAAAAAAAAAAAADAPD8BshG63yz7/Y0AAAAASUVORK5CYII="/>
+            </defs>
+            </svg>
+            </div>
         </div>
 
       </div>
