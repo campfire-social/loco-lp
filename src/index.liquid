@@ -83,7 +83,7 @@ layout: layouts/base.liquid
         <li>
           <a class="block text-center" href="{{retailer.url}}" target="_blank">
             {% if retailer.image and retailer.image != "" %}
-            <img class="mx-auto w-40" src="{{retailer.image}}" alt="{{retailer.name}} logo">
+            <img class="mx-auto w-36" src="{{retailer.image}}" alt="{{retailer.name}} logo">
             {% endif %}
             <span class="sr-only">{{retailer.name}}</span>
           </a>
@@ -102,7 +102,7 @@ layout: layouts/base.liquid
       <div class="text-white lg:p-8 lg:container lg:mx-auto">
         <div class="lg:grid lg:grid-cols-2 lg:gap-20">
           <h2 class="sr-only">Subscribe to the LoCo Newsletter</h2>
-          <p class="text-xl md:text-3xl uppercase font-bold">Stay connected for the latest product news and fresh recipe
+          <p class="text-xl md:text-3xl uppercase font-bold mb-8">Stay connected for the latest product news and fresh recipe
             ideas.
             Provide your email to receive 10% off your griddle purchase.</p>
           <div>
@@ -186,7 +186,7 @@ layout: layouts/base.liquid
 
     <div class="pt-12">
       {% if recipes.size > 0 %}
-      <ul class="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-6">
+      <ul class="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-6 space-y-6 lg:space-y-0">
         {% for recipe in recipes %}
         {% if forloop.index == 1 %}
         {% assign gridClass = "lg:row-span-2 lg:col-span-2 lg:md:row-span-4" %}
@@ -231,8 +231,8 @@ layout: layouts/base.liquid
   <div class="px-6 py-12 lg:py-20">
     <div class="container mx-auto mb-8">
       {% include 'components/headline', headline_text: 'About Loco Cookers', headline_tag: 'h2' %}
-      <div class="border-2 border-loco-orange lg:flex">
-        <div class="p-4 md:hidden lg:block lg:border-r-2 lg:border-loco-orange lg:w-1/4">
+      <div class="mt-8 border-2 border-loco-orange lg:flex">
+        <div class="p-4 md:hidden lg:block border-b-2 lg:border-b-0 lg:border-r-2 border-loco-orange lg:w-1/4">
         <div class="bg-loco-orange h-full lg:flex lg:items-center lg:justify-center">
           <img class="" src="/assets/img/loco-square.png" alt="LoCo Cookers logo">
         </div>
@@ -270,15 +270,15 @@ layout: layouts/base.liquid
               the table</h3>
           </div>
           <div class="lg:flex lg:w-full">
-            <div class="flex items-center justify-center p-4 border-b-2 border-loco-orange lg:border-b-0 lg:flex-1">
+            <div class="flex items-center justify-center p-4 border-b-2 border-loco-orange lg:border-b-0 lg:border-l-2 lg:flex-1 lg:order-2">
               <span class="block mr-4">
                 {% include 'icons/timer' icon_class: 'block' %}
               </span>
               <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Zero to party in no time
               </p>
             </div>
-            <div class="flex items-center">
-              <div class="flex-1 border-loco-orange lg:border-l-2 h-full">
+            <div class="flex items-center lg:order-1">
+              <div class="flex-1 border-loco-orange h-full">
                 <div class="flex items-center justify-center h-full p-4">
                   <span class="block sm:mr-4">
                     {% include 'icons/approved' icon_class: 'block' %}
@@ -299,9 +299,9 @@ layout: layouts/base.liquid
 
       </div>
     </div>
-    <div class="max-w-6xl mx-auto">
+    <div class="mt-12 lg:mt-24 max-w-6xl mx-auto">
       <div class="md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12">
-        <h3 class="text-xl md:text-2xl font-bold uppercase">So feel free to pull a chair and go <span
+        <h3 class="mb-8 text-xl md:text-2xl font-bold uppercase">So feel free to pull a chair and go <span
             class="normal-case">LoCo</span>
           with us</h3>
         <div class="md:col-span-2 lg:col-span-3 text-lg space-y-6">
