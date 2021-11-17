@@ -3,7 +3,7 @@ layout: layouts/base.liquid
 ---
 
 {% comment %} Hero Section {% endcomment %}
-<section class="relative bg-loco-orange overflow-hidden">
+<section id="hero" class="relative bg-loco-orange overflow-hidden">
   <div>
     <div class="relative">
       <div class="aspect-w-16 aspect-h-9">
@@ -43,7 +43,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} Product Section {% endcomment %}
-<section class="relative bg-loco-orange">
+<section id="griddles" class="relative bg-loco-orange">
   <div class="px-6 md:pt-8">
     <div class="container mx-auto">
       <h2
@@ -96,7 +96,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} Newsletter Section {% endcomment %}
-<section class="relative h-auto overflow-x-hidden">
+<section id="newsletter" class="relative h-auto overflow-x-hidden">
   <div class="relative z-1">
     <div class="bg-loco-umber px-6 pt-8 lg:bg-transparent lg:absolute lg:z-10 lg:top-0 lg:left-0 lg:w-full">
       <div class="text-white lg:p-8 lg:container lg:mx-auto">
@@ -106,7 +106,7 @@ layout: layouts/base.liquid
             ideas.
             Provide your email to receive 10% off your griddle purchase.</p>
           <div>
-            <form>
+            <form action="https://formspree.io/f/xbjqnpyv" method="POST">
               <div class="lg:w-3/4">
                 <label class="sr-only">Your Email Address</label>
                 <input class="w-full p-4 text-black mb-6" type="email" placeholder="Your Email Address">
@@ -178,7 +178,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} Recipe Section {% endcomment %}
-<section class="px-3">
+<section id="recipes" class="px-3">
   <div class="container mx-auto relative -mt-20 lg:-mt-1/4">
     <div class="">
       {% include 'components/headline', headline_text: 'Recipe Ideas', headline_tag: 'h2' %}
@@ -227,7 +227,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} About Section {% endcomment %}
-<section class="relative z-10">
+<section id="about" class="relative z-10">
   <div class="px-6 py-12 lg:py-20">
     <div class="container mx-auto mb-8">
       {% include 'components/headline', headline_text: 'About Loco Cookers', headline_tag: 'h2' %}
