@@ -2,6 +2,30 @@ import '../css/main.css';
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    function openNav() {
+        document.getElementById("siteNav").classList.toggle("is-open");
+      }
+
+    document.getElementById("siteNavToggle").addEventListener("click", function() {
+        openNav();
+    });
+
+    var navItems = document.querySelectorAll('.nav-link');
+    for (var i = 0; i < navItems.length; i++) {
+        navItems[i].addEventListener("click", function (event) {
+            event.preventDefault();
+            if(document.getElementById("siteNav").classList.contains("is-open")){
+                document.getElementById("siteNav").classList.remove("is-open");
+
+            }
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    }
+
+
+
     const callback = function (entries) {
         entries.forEach((entry) => {
           console.log(entry);

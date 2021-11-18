@@ -2,20 +2,36 @@
 
 <header class="absolute top-2 left-0 z-40 w-full">
   <div class="px-8 py-6 flex items-center">
-    <a href="https://www.lococookers.com" target="_blank" class="block w-24 text-white">
+    <a href="https://www.lococookers.com" target="_blank" class="block w-24 text-white relative z-50">
       {% include 'icons/loco-logo', icon_class: 'fill-current block w-full' %}
       <span class="sr-only">LoCo Cookers</span>
     </a>
     {% if _nav_items.size > 0 %}
-    <nav class="hidden md:block ml-auto mr-8">
-      <ul class="flex">
-        {% for _item in _nav_items  %}
-        <li>
-          {% include 'components/nav-item', nav_link: _item.url, nav_text: _item.text, nav_target: _item.target %}
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div id="siteNav" class="site-nav h-full w-full fixed z-40 top-0 left-0 bg-black md:static md:bg-transparent md:h-auto md:w-auto md:ml-auto md:visible md:opacity-100 md:block">
+      <div class="relative w-full h-full flex flex-col items-center justify-center p-12 md:block md:p-0">
+      <nav class="">
+        <ul class="text-center md:text-left md:flex">
+          {% for _item in _nav_items %}
+          
+          <li class="mb-6">
+            {% include 'components/nav-item', nav_link: _item.url, nav_text: _item.text, nav_target: _item.target %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      </div>
+    </div>
     {% endif %}
+    <button id="siteNavToggle" class="ml-auto md:hidden text-white w-12 h-12 relative focus:outline-none bg-black hover:bg-loco-orange focus:bg-loco-orange z-50">
+      <span class="sr-only">Open main menu</span>
+      <div class="block w-5 absolute left-1/2 top-1/2 transform  -translate-x-1/2 -translate-y-1/2">
+        <span aria-hidden="true"
+          class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out -translate-y-1.5"></span>
+        <span aria-hidden="true"
+          class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+        <span aria-hidden="true"
+          class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out translate-y-1.5"></span>
+      </div>
+    </button>
   </div>
 </header>
