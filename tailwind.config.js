@@ -25,20 +25,16 @@ module.exports = {
               '-1/5': '-20%',
               '-1/10': '-10%',
               '-1px': '-1px',
-              '1.5': '0.375rem',
-              '-1.5': '-0.375rem',
+              '375r': '0.375rem',
+              '-357r': '-0.375rem',
               '2px': "2px",
-              '0.5' : '.125rem'
+              '125r' : '.125rem'
           },
           zIndex: {
               '-1': '-1'
           },
           width: {
               '200p': "200%"
-          },
-          height: {
-              '2px': "2px",
-              '0.5' : '.125rem'
           },
           animation: {
             fadeIn: "fadeIn 750ms ease-in forwards"
@@ -48,10 +44,6 @@ module.exports = {
               "0%": { opacity: 0 },
               "100%": { opacity: 1 }
             }
-          },
-          translate: {
-              '1.5': '0.375rem',
-              '-1.5': '-0.375rem'
           }
       }
     },
