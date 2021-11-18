@@ -46,7 +46,8 @@ module.exports = {
             }
           },
           translate: {
-              '1.5': '0.375rem'
+              '1.5': '0.375rem',
+              '-1.5': '-0.375rem'
           }
       }
     },

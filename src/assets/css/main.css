@@ -50,6 +50,19 @@
 
 @layer components {
 
+    .h-0\.5 {
+        height: 0.125rem;
+    }
+
+    .translate-y-1\.5 {
+        transform: translateY('.375rem');
+    }
+
+    .-translate-y-1\.5 {
+        transform: translateY('-.375rem');
+    }
+
+
     .recipe-image img {
         @apply h-full object-cover z-10;
     }
