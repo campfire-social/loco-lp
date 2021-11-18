@@ -32,6 +32,9 @@ module.exports = {
           width: {
               '200p': "200%"
           },
+          height: {
+              '2px': "2px"
+          },
           animation: {
             fadeIn: "fadeIn 750ms ease-in forwards"
           },
