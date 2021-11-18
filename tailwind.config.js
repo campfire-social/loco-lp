@@ -30,10 +30,21 @@ module.exports = {
           },
           width: {
               '200p': "200%"
+          },
+          animation: {
+            fadeIn: "fadeIn 750ms ease-in forwards"
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 }
+            }
           }
       }
     },
-    variants: {},
+    variants: {
+        animation: ["motion-safe"]
+    },
     plugins: [
         require('@tailwindcss/aspect-ratio'),
     ]
