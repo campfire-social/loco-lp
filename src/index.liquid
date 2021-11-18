@@ -114,7 +114,7 @@ layout: layouts/base.liquid
             <form id="newsLetterForm" action="{{site.formspree}}" method="POST">
               <div class="lg:w-3/4">
                 <label for="emailAddress" class="sr-only">Your Email Address</label>
-                <input name="emailAddress" id="emailAddress" class="w-full p-4 text-black mb-6" type="email" placeholder="Your Email Address" required>
+                <input name="emailAddress" id="emailAddress" class="w-full p-4 text-black mb-6 focus:outline-none focus:ring focus:border-loco-blue" type="email" placeholder="Your Email Address" required>
               </div>
               {%include "components/button", btn_id: "newsLetterFormSend", btn_text: "Subscribe", btn_type: "submit" %}
             </form>

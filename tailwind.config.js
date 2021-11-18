@@ -5,7 +5,8 @@ module.exports = {
           colors: {
               'loco-orange': '#e15829',
               'loco-tan': '#DCCFAF',
-              'loco-umber': '#983820'
+              'loco-umber': '#983820',
+              'loco-blue': '#22432a'
           },
           inset: {
             '18p': '18%',

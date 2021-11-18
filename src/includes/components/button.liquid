@@ -11,7 +11,7 @@
   {% assign _tag = "button" %}
 {% endif %}
 
-<{{_tag}} {% if _id %}id="{{_id}}"{% endif %}  class="inline-flex px-6 py-4 text-white items-center justify-center bg-loco-orange hover:bg-black focus:bg-black transition-colors font-bold uppercase tracking-wider text-lg" {% unless _url %} type="{{_type}}" {% endunless %}
+<{{_tag}} {% if _id %}id="{{_id}}"{% endif %}  class="inline-block px-6 py-4 text-white text-center align-middle bg-loco-orange hover:bg-black focus:bg-black transition-colors font-bold uppercase tracking-wider text-lg cursor-pointer" {% unless _url %} type="{{_type}}" {% endunless %}
             {% if _url %}href="{{_url}}"{% endif %} {% if _target %}target="{{_target}}" {% endif %}>
             {{_text}}
 </{{_tag}}>
