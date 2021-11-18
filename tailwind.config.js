@@ -33,7 +33,8 @@ module.exports = {
               '200p': "200%"
           },
           height: {
-              '2px': "2px"
+              '2px': "2px",
+              '0.5' : '.125rem'
           },
           animation: {
             fadeIn: "fadeIn 750ms ease-in forwards"
@@ -43,6 +44,9 @@ module.exports = {
               "0%": { opacity: 0 },
               "100%": { opacity: 1 }
             }
+          },
+          translate: {
+              '1.5': '0.375rem'
           }
       }
     },
