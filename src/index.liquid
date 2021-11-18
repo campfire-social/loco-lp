@@ -30,11 +30,13 @@ layout: layouts/base.liquid
       <div class="container mx-auto">
         <div class="md:grid md:grid-cols-2">
           <div class="relative -mt-14 sm:-mt-20 px-6 py-14 text-white md:col-span-1 md:col-start-2">
+          <div data-aos="fade-in">
             <span class="inline-block h-3 w-12 bg-black mb-6"></span>
             <h1 class="sr-only">Loco Cookers</h1>
-            <p class="text-4xl lg:text-5xl text-upper font-bold uppercase">When everyone has a seat at the table you
+            <p  class="text-4xl lg:text-5xl text-upper font-bold uppercase">When everyone has a seat at the table you
               need something big to cook
               for them.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -44,7 +46,7 @@ layout: layouts/base.liquid
 
 {% comment %} Product Section {% endcomment %}
 <section id="griddles" class="relative bg-loco-orange">
-  <div class="px-6 md:pt-8">
+  <div data-aos="fade-in" class="px-6 md:pt-8">
     <div class="container mx-auto">
       <h2
         class="bg-black px-6 py-4 text-loco-tan text-xl md:text-2xl lg:text-3xl font-serif font-strong font-bold text-center max-w-xl lg:max-w-4xl  tracking-wide mx-auto">
@@ -53,7 +55,7 @@ layout: layouts/base.liquid
     </div>
   </div>
   {% if griddles.size > 0 %}
-  <div class="px-2 md:px-3 mt-6 md:mt-10">
+  <div data-aos="fade-in" data-aos-delay="500" class="px-2 md:px-3 mt-6 md:mt-10">
     <div class="max-w-4xl lg:container mx-auto mb-12 lg:mb-16">
       {% include 'components/headline', headline_text: 'The Griddles', headline_tag: 'h3' %}
       <ul class="mt-6 space-y-8 lg:space-y-0">
@@ -64,7 +66,8 @@ layout: layouts/base.liquid
         {% else %}
         {% assign _even = false %}
         {% endif %}
-        <li class="{%if forloop.last%}border-b-2 border-loco-tan{%endif%}">
+        {% assign _prodDelay = 250 | times: forloop.index %}
+        <li data-aos="fade-in" data-aos-delay="{{_prodDelay}}" class="{%if forloop.last%}border-b-2 border-loco-tan{%endif%}">
           {% include 'components/product', content: griddle, even: _even  %}
         </li>
         {% endfor %}
@@ -72,7 +75,7 @@ layout: layouts/base.liquid
     </div>
   </div>
   {% endif %}
-  <div class="mt-8 pb-12 lg:pb-16">
+  <div data-aos="fade-in" data-aos-delay="250" class="mt-8 pb-12 lg:pb-16">
     <h3 class="font-serif max-w-xs md:max-w-none mx-auto text-center text-loco-tan text-2xl lg:text-3xl font-bold">
       Available at your favorite grilling
       retailers.</h3>
@@ -80,7 +83,8 @@ layout: layouts/base.liquid
     <div class="container mx-auto">
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-8 items-center">
         {% for retailer in retailers %}
-        <li>
+        {% assign _retDelay = 250 | times: forloop.index %}
+        <li data-aos="fade-in" data-aos-delay="{{_retDelay}}">
           <a class="block text-center" href="{{retailer.url}}" target="_blank">
             {% if retailer.image and retailer.image != "" %}
             <img class="mx-auto w-36" src="{{retailer.image}}" alt="{{retailer.name}} logo">
@@ -100,7 +104,7 @@ layout: layouts/base.liquid
   <div class="relative z-1">
     <div class="bg-loco-umber px-6 pt-8 lg:bg-transparent lg:absolute lg:z-10 lg:top-0 lg:left-0 lg:w-full">
       <div class="text-white lg:p-8 lg:container lg:mx-auto xl:max-w-7xl">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-20">
+        <div data-aos="fade-in" data-aos-delay="250" class="lg:grid lg:grid-cols-2 lg:gap-20">
           <h2 class="sr-only">Subscribe to the LoCo Newsletter</h2>
           <p class="text-xl md:text-3xl uppercase font-bold mb-8">Stay connected for the latest product news and fresh
             recipe
@@ -181,15 +185,16 @@ layout: layouts/base.liquid
 
 {% comment %} Recipe Section {% endcomment %}
 <section id="recipes" class="px-3">
-  <div class="container mx-auto relative -mt-20 lg:-mt-1/4">
+  <div data-aos="fade-in" class="container mx-auto relative -mt-20 lg:-mt-1/4">
     <div class="">
       {% include 'components/headline', headline_text: 'Recipe Ideas', headline_tag: 'h2' %}
     </div>
 
     <div class="pt-12">
       {% if recipes.size > 0 %}
-      <ul class="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-6 space-y-6 lg:space-y-0">
+      <ul data-aos="fade-in" data-aos-delay="500" class="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-6 space-y-6 lg:space-y-0">
         {% for recipe in recipes %}
+        {% assign _recDelay = 250 | times: forloop.index %}
         {% if forloop.index == 1 %}
         {% assign gridClass = "lg:row-span-2 lg:col-span-2 lg:md:row-span-4" %}
         {% elsif forloop.index == 2 %}
@@ -232,9 +237,9 @@ layout: layouts/base.liquid
 {% comment %} About Section {% endcomment %}
 <section id="about" class="relative z-10">
   <div class="px-6 py-12 lg:py-20">
-    <div class="container mx-auto mb-8">
+    <div data-aos="fade-in" data-aos-delay="500"  class="container mx-auto mb-8">
       {% include 'components/headline', headline_text: 'About Loco Cookers', headline_tag: 'h2' %}
-      <div class="mt-8 border-2 border-loco-orange lg:flex">
+      <div data-aos="fade-in" data-aos-delay="500"  class="mt-8 border-2 border-loco-orange lg:flex">
         <div class="p-4 md:hidden lg:block border-b-2 lg:border-b-0 lg:border-r-2 border-loco-orange lg:w-1/4">
           <div class="bg-loco-orange h-full lg:flex lg:items-center lg:justify-center">
             {% image "/assets/img/loco-square.png", "LoCo Cookers logo" %}
@@ -307,7 +312,7 @@ layout: layouts/base.liquid
 
       </div>
     </div>
-    <div class="mt-12 lg:mt-24 max-w-6xl mx-auto">
+    <div data-aos="fade-in" data-aos-delay="250" class="mt-12 lg:mt-24 max-w-6xl mx-auto">
       <div class="md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12">
         <h3 class="mb-8 text-xl md:text-2xl font-bold uppercase">So feel free to pull a chair and go <span
             class="normal-case">LoCo</span>

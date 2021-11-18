@@ -49,7 +49,7 @@
 @tailwind utilities; 
 
 @layer components {
-
+    
     .recipe-image img {
         @apply h-full object-cover z-10;
     }
