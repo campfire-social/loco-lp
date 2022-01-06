@@ -33,9 +33,7 @@ layout: layouts/base.liquid
           <div class="js-show-on-scroll">
             <span class="inline-block h-3 w-12 bg-black mb-6"></span>
             <h1 class="sr-only">Loco Cookers</h1>
-            <p  class="text-4xl lg:text-5xl text-upper font-bold uppercase">When everyone has a seat at the table you
-              need something big to cook
-              for them.</p>
+            <p  class="text-4xl md:text-5xl lg:text-7xl text-upper font-bold uppercase">Hey Neighbor… <br/> Whatcha Griddlin? </p>
             </div>
           </div>
         </div>
@@ -50,7 +48,7 @@ layout: layouts/base.liquid
     <div class="container mx-auto">
       <h2
         class="bg-black px-6 py-4 text-loco-tan text-xl md:text-2xl lg:text-3xl font-serif font-strong font-bold text-center max-w-xl lg:max-w-4xl  tracking-wide mx-auto">
-        Introducing Griddles from LoCo
+        Introducing Griddles from LoCo. <br/> Your new favorite way to cook.
       </h2>
     </div>
   </div>
@@ -106,10 +104,7 @@ layout: layouts/base.liquid
       <div class="js-show-on-scroll text-white lg:p-8 lg:container lg:mx-auto xl:max-w-7xl">
         <div  class="lg:grid lg:grid-cols-2 lg:gap-20">
           <h2 class="sr-only">Subscribe to the LoCo Newsletter</h2>
-          <p class="text-xl md:text-3xl uppercase font-bold mb-8">Stay connected for the latest product news and fresh
-            recipe
-            ideas.
-            Provide your email to receive 10% off your griddle purchase.</p>
+          <p class="text-xl md:text-3xl uppercase font-bold mb-8">Pull up a seat at the table for the latest product news and fresh recipe ideas</p>
           <div>
             <form id="newsLetterForm" action="{{site.formspree}}" method="POST">
               <div class="lg:w-3/4">
@@ -187,7 +182,8 @@ layout: layouts/base.liquid
 <section id="recipes" class="px-3">
   <div class="container mx-auto relative -mt-20 lg:-mt-1/4 js-show-on-scroll">
     <div class="">
-      {% include 'components/headline', headline_text: 'Recipe Ideas', headline_tag: 'h2' %}
+      {% include 'components/headline', headline_text: "Whatcha Griddlin' Next? 
+      ", headline_tag: 'h2' %}
     </div>
 
     <div class="pt-12">
@@ -251,7 +247,7 @@ layout: layouts/base.liquid
               <span class="block mr-4">
                 {% include 'icons/heat' icon_class: 'block' %}
               </span>
-              <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Crank up the heat</p>
+              <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Made To Gather</p>
             </div>
             <div class="flex w-full">
               <div class="flex-1 flex items-center justify-center  p-4 lg:px-8">
@@ -276,8 +272,7 @@ layout: layouts/base.liquid
             </div>
           </div>
           <div class="px-4 py-8  lg:px-8 text-center border-b-2 border-loco-orange lg:w-full lg:flex-1 flex flex-col items-center justify-center">
-            <h3 class="font-bold uppercase tracking-wide text-loco-orange text-2xl md:text-3xl xl:text-4xl">Everyone has a seat at
-              the table</h3>
+            <h3 class="font-bold uppercase tracking-wide text-loco-orange text-2xl md:text-3xl xl:text-4xl">B.S. Not Included</h3>
           </div>
           <div class="lg:flex lg:w-full lg:flex-1">
             <div
@@ -285,7 +280,7 @@ layout: layouts/base.liquid
               <span class="block mr-4">
                 {% include 'icons/timer' icon_class: 'block' %}
               </span>
-              <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Zero to party in no time
+              <p class="font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">Cook Faster, Party Longer
               </p>
             </div>
             <div class="flex items-center lg:order-1">
@@ -295,7 +290,7 @@ layout: layouts/base.liquid
                     {% include 'icons/approved' icon_class: 'block' %}
                   </span>
                   <p class="hidden sm:block font-bold uppercase tracking-wide text-loco-umber text-xl xl:text-2xl">
-                    Simplified</p>
+                    Join the Party</p>
                 </div>
               </div>
               <div class="flex-initial p-4 lg:px-8 border-l-2 border-loco-orange">
