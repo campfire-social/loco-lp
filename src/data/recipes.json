@@ -7,17 +7,11 @@
         "url": ""
     },
     {
-        "name": "Smash Burgers", 
-        "image": "/assets/img/smash-burgers.jpg",
+        "name": "Breakfast Burritos", 
+        "image": "/assets/img/breakfast-burritos.png",
         "difficulty": "Easy",
-        "time": "10 min.",
-        "url": ""
-    },
-    {
-        "name": "Smash Burgers", 
-        "image": "/assets/img/smash-burgers.jpg",
-        "difficulty": "Easy",
-        "time": "10 min.",
+        "time": "20 min.",
         "url": ""
     }
+
 ]

@@ -1,6 +1,63 @@
 import '../css/main.css';
+import MicroModal from 'micromodal';
+
 
 document.addEventListener('DOMContentLoaded', function () {
+
+    var autoplayVideo = function (modal) {
+       
+        // Look for a YouTube, Vimeo, or HTML5 video in the modal
+        var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+    
+        // Bail if the modal doesn't have a video
+        if (!video) return;
+    
+        // If an HTML5 video, play it
+        if (video.tagName.toLowerCase() === 'video') {
+            video.play();
+            return;
+        }
+    
+        // Add autoplay to video src
+        // video.src: the current video `src` attribute
+        // (video.src.indexOf('?') < 0 ? '?' : '&'): if the video.src already has query string parameters, add an "&". Otherwise, add a "?".
+        // 'autoplay=1': add the autoplay parameter
+       
+            video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+        
+    
+    };
+
+    var stopVideo = function (modal) {
+
+        // Look for a YouTube, Vimeo, or HTML5 video in the modal
+        var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+    
+        // Bail if the modal doesn't have a video
+        if (!video) return;
+    
+        // If an HTML5 video, pause it
+        if (video.tagName.toLowerCase() === 'video') {
+            video.pause();
+            return;
+        }
+    
+        // Remove autoplay from video src
+        video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
+    
+    };
+
+    MicroModal.init({
+        openTrigger: 'data-custom-open',
+        onShow: function (modal) {
+            autoplayVideo(modal); 
+        },
+        onClose: function (modal) {
+            stopVideo(modal);
+        },
+        awaitOpenAnimation: false,
+        awaitCloseAnimation: false,
+    });
 
     function openNav() {
         document.getElementById("siteNav").classList.toggle("is-open");
