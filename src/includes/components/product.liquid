@@ -9,14 +9,16 @@
     </div>
     {% comment %} Product Text {% endcomment %}
     <div class="md:grid md:grid-cols-2 md:border-t-2 lg:border-t-0   border-loco-tan lg:col-span-3 {% if _i == true %} lg:border-l-0 {% else %} lg:border-l-2 {% endif %}">
-      <div class="py-6 md:pr-6 lg:p-6">
-        <h3 class="text-white text-xl font-bold">{{{_content.name}}</h3>
+      <div class="py-6 md:pr-6 lg:p-6 flex flex-col justify-center items-center">
+        <h3 class="text-white text-2xl lg:text-4xl font-bold">{{{_content.name}}</h3>
+        {% comment %}
         <p class="mt-6 text-white">{{_content.description}}</p>
         <ul class="mt-4 list-disc ml-6">
           {% for _detail in _content.details %}
           <li class="text-white">{{_detail}}</li>
           {% endfor %}
         </ul>
+        {% endcomment %}
       </div>
       {% comment %} Product Icons {% endcomment %}
       <div class="md:border-l-2 border-loco-tan">
@@ -28,17 +30,15 @@
                 <span class="mr-6 lg:mr-4">
                   {% include 'icons/clean' icon_class: 'mx-auto block' %}
                 </span>
-                <p class="flex-1 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan">Cleans
-                  <br class="lg:hidden"> up Fast</p>
+                <p class="flex-1 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan text-center"> {{_content.details[0]}}</p>
               </div>
               <div class="flex-1 flex items-center border-t-2 border-loco-tan p-4">
-                <span class="ml-6 lg:ml-4 order-2">
-                  {% include 'icons/strong' icon_class: 'mx-auto block' %}
+                <span class="ml-6 lg:ml-4 order-2 text-loco-umber">
+                  {% include 'icons/size' icon_class: 'mx-auto block fill-current w-20' %}
                 </span>
                 <p
-                  class="text-right flex-1 order-1 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan">
-                  Built <br class="lg:hidden"> to
-                  Last</p>
+                  class="flex-1 order-1 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan text-center">
+                  {{_content.details[2]}}</p>
               </div>
             </div>
             <div class="w-2/5 flex flex-col items-center justify-center border-l-2 border-loco-tan p-4">
@@ -46,7 +46,7 @@
                 {% include 'icons/thermometer' icon_class: 'mx-auto block' %}
               </span>
               <p class="mt-2 uppercase font-bold text-xl sm:text-2xl lg:text-xl xl:text-2xl text-loco-tan text-center">
-                Smart Temp Control</p>
+              {{_content.details[1]}}</p>
             </div>
           </div>
         </div>
