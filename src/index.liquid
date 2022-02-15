@@ -92,7 +92,7 @@ layout: layouts/base.liquid
       retailers.</h3>
     {% if retailers.size > 0 %}
     <div class="container mx-auto">
-      <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-8 items-center">
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-8 items-center justify-center">
         {% for retailer in retailers %}
         {% assign _retDelay = 250 | times: forloop.index %}
         <li>
@@ -192,6 +192,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} Recipe Section {% endcomment %}
+<!--
 <section id="recipes" class="px-3">
   <div class="container mx-auto relative -mt-20 lg:-mt-1/4 js-show-on-scroll">
     <div class="">
@@ -242,6 +243,7 @@ layout: layouts/base.liquid
     </div>
   </div>
 </section>
+-->
 
 {% comment %} About Section {% endcomment %}
 <section id="about" class="relative z-20">
