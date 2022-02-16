@@ -21,7 +21,7 @@
     gtag('config', '{{site.g_tag}}');
   </script>
   {% endif %}
-  {% if meta_pixel == true %}
+
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -39,7 +39,7 @@
   src=https://www.facebook.com/tr?id=378943363222422&ev=PageView&noscript=1
   /></noscript>
   <!-- End Meta Pixel Code -->
-  {% endif %}
+  
   {% if site.open_graph %}
     <meta property="og:title" content="{{site.open_graph.title}}" />
     <meta property="og:description" content="{{site.open_graph.description}}" />
