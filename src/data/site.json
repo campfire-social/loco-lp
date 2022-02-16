@@ -20,5 +20,7 @@
         "description": "Introducing the new LoCo Cookers Griddles",
         "username": "@lococookers"
     },
-    "formspree": "https://formspree.io/f/xbjqnpyv"
+    "formspree": "https://formspree.io/f/xbjqnpyv",
+    "g_tag": "UA-114649185-1",
+    "meta_pixel": true
   }
