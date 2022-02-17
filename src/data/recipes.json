@@ -1,17 +1,9 @@
 [
     {
-        "name": "Smash Burgers", 
-        "image": "/assets/img/smash-burgers.jpg",
+        "name": "BBQ Fried Rice", 
+        "image": "/assets/img/bbq-fried-rice.png",
         "difficulty": "Easy",
         "time": "10 min.",
-        "url": ""
-    },
-    {
-        "name": "Breakfast Burritos", 
-        "image": "/assets/img/breakfast-burritos.png",
-        "difficulty": "Easy",
-        "time": "20 min.",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=JFwc2z6C-ms"
     }
-
 ]

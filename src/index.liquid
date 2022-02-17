@@ -92,7 +92,7 @@ layout: layouts/base.liquid
       retailers.</h3>
     {% if retailers.size > 0 %}
     <div class="container mx-auto">
-      <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-8 items-center justify-center">
+      <ul class="grid grid-cols-3 gap-6 lg:gap-8 mt-8 items-center justify-center content-center">
         {% for retailer in retailers %}
         {% assign _retDelay = 250 | times: forloop.index %}
         <li>
@@ -192,7 +192,7 @@ layout: layouts/base.liquid
 </section>
 
 {% comment %} Recipe Section {% endcomment %}
-<!--
+
 <section id="recipes" class="px-3">
   <div class="container mx-auto relative -mt-20 lg:-mt-1/4 js-show-on-scroll">
     <div class="">
@@ -220,7 +220,8 @@ layout: layouts/base.liquid
               {% image recipe.image, _recipeAlt, "recipe-image"  %}
             </div>
             <div class="absolute z-30 bottom-0 left-0 w-full">
-              <div class="p-6 text-white">
+              <div class="flex items-center">
+               <div class="p-6 text-white">
                 <h3 class="font-serif font-bold text-2xl">{{recipe.name}}</h3>
                 <div class="inline-flex">
                   <p>
@@ -234,6 +235,11 @@ layout: layouts/base.liquid
                   </p>
                 </div>
               </div>
+                <a class="inline-block ml-auto text-white p-6 font-bold uppercase tracking-wider" href="{{recipe.url}}" target="_blank">
+                  <span>Watch Video</span>
+                </a>
+              </div>
+             
             </div>
           </article>
         </li>
@@ -243,7 +249,7 @@ layout: layouts/base.liquid
     </div>
   </div>
 </section>
--->
+
 
 {% comment %} About Section {% endcomment %}
 <section id="about" class="relative z-20">
