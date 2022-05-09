@@ -352,7 +352,8 @@ layout: layouts/base.liquid
             #LoCo
             with us. </p>
             <div class="md:flex md:items-center relative z-40">
-            {%include "components/button", btn_text: "Learn More About Loco", btn_url: "https://www.lococookers.com/pages/about-loco", btn_target: "_blank" %}
+            <button onclick="window.open('https://www.lococookers.com/pages/about-loco','_blank');" class="inline-block px-6 py-4 text-white text-center align-middle bg-loco-orange hover:bg-black focus:bg-black transition-colors font-bold uppercase tracking-wider text-lg cursor-pointer" type="button" target="_blank">
+Learn More About Loco</button>
             <ul class="mt-6 md:mt-0 md:ml-6 flex space-x-6">
               <li>
                 <a href="https://www.facebook.com/LoCoCookers/" target="_blank" class="text-black hover:text-loco-umber focus:text-loco-umber">
