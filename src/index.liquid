@@ -69,17 +69,24 @@ layout: layouts/base.liquid
   <div class="js-show-on-scroll px-2 md:px-3 mt-6 md:mt-10">
     <div class="max-w-4xl lg:container mx-auto mb-12 lg:mb-16">
       {% include 'components/headline', headline_text: 'The Griddles', headline_tag: 'h3' %}
-      <ul class="mt-6 space-y-8 lg:space-y-0">
-        
-        
-        
-        
-        
-        
+      
+      <!--<ul class="mt-6 space-y-8 lg:space-y-0">
+        {% for griddle in griddles %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% if thecycle == 'even' %}
+        {% assign _even = true %}
+        {% else %}
+        {% assign _even = false %}
+        {% endif %}
+        {% assign _prodDelay = 250 | times: forloop.index %}
+        <li class="{%if forloop.last%}border-b-2 border-loco-tan{%endif%}">
+          {% include 'components/product', content: griddle, even: _even  %}
+        </li>
+        {% endfor %}
+      </ul>-->
+      
+      <ul class="mt-6 space-y-8 lg:space-y-0">       
         <li class="">
-          
-
-
 <article class="md:border-t-2 border-loco-tan">
   <div class="lg:grid lg:grid-cols-5">
     
