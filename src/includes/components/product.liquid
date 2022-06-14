@@ -11,6 +11,15 @@
     <div class="md:grid md:grid-cols-2 md:border-t-2 lg:border-t-0   border-loco-tan lg:col-span-3 {% if _i == true %} lg:border-l-0 {% else %} lg:border-l-2 {% endif %}">
       <div class="py-6 md:pr-6 lg:p-6 flex flex-col justify-center items-center">
         <h3 class="text-white text-2xl lg:text-4xl font-bold">{{{_content.name}}</h3>
+        {% if _content.urls.size > 0 %}
+          <ul class="w-full">
+            {% for _link in _content.urls %}
+              <li>
+                <a href="{{_link.url}}" target="_blank" class="inline-block mt-6 lg:mt- mb-3 lg:mb-4 px-6 py-4 bg-loco-umber text-loco-tan text-center align-middle hover:bg-black focus:bg-black transition-colors font-bold uppercase tracking-wider text-m sm:text-2xl lg:text-xl xl:text-2xl cursor-pointer">{{_link.name}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
         {% comment %}
         <p class="mt-6 text-white">{{_content.description}}</p>
         <ul class="mt-4 list-disc ml-6">
